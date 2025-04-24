@@ -24,8 +24,19 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ── Title ────────────────────────────────────────────────
+# ── Title & Description ─────────────────────────────────
 st.title("📈 Portfolio Analysis & Optimizer Tool")
+
+st.markdown("""
+**What you can do with this app:**
+
+- **Portfolio Overview:** Track adjusted closing prices and daily performance across your selected tickers.
+- **Financials:** View fundamental metrics and ratio analyses for each company.
+- **Optimizer:** Get suggestions on portfolio allocation to maximize return for a given risk level.
+- **Performance & Metrics:** Deep dive into KPIs, cumulative returns, and benchmark comparisons.
+- **Fraud Detection:** Assess potential financial misreporting via machine learning and rule‑based models.
+- **10‑K Explorer:** Download and query recent SEC 10‑K filings interactively.
+""", unsafe_allow_html=True)
 
 # ── Imports & logger ─────────────────────────────────────
 from utils.logger import get_logger

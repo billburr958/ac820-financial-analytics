@@ -9,9 +9,9 @@ import matplotlib.pyplot as plt
 import streamlit.components.v1 as components
 from utils import fraud as F
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────
 # Plain-language dictionary for every feature
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────
 FEATURE_DOC = {
     "DSRI":  "Days-Sales-in-Receivables Index — compares receivables growth to sales growth; high values can signal revenue inflation.",
     "GMI":   "Gross-Margin Index — deterioration (> 1) may motivate manipulation.",
@@ -28,9 +28,10 @@ FEATURE_DOC = {
     "soft_asset_ratio":"Share of assets that are ‘soft’ (not cash/PPE).",
 }
 
-# ───────────────────────────────────────────────────────────────
+# ───────────────────────
 # Helpers
-# ───────────────────────────────────────────────────────────────
+# ───────────────────────
+
 def _impact(shap_arr, feat_row):
     """Return dataframe sorted by |SHAP| desc."""
     df = pd.DataFrame(
@@ -41,18 +42,21 @@ def _impact(shap_arr, feat_row):
     df["abs"] = df["shap"].abs()
     return df.sort_values("abs", ascending=False)
 
-# ───────────────────────────────────────────────────────────────
+# ───────────────────────
 # Main render function
-# ───────────────────────────────────────────────────────────────
+# ───────────────────────
+
 def render(tickers):
     st.markdown("## Fraud Detection 🔍")
+    # ⚠️ Warning about data coverage
+    st.markdown("> ⚠️ **Warning:** This analysis uses at most two full fiscal years of data. Results may not reflect longer-term trends.")
     st.markdown("""
 This tab lets you assess a company’s financial statements for potential fraud using three complementary methods:
 
 - **Custom Trained Model (ML)** – a CatBoost-based classifier we trained on financial ratios; outputs a fraud probability plus SHAP explainability.  
   ▶️ [View Development Notebook](https://drive.google.com/file/d/1gWQ33mYepsZ9MHvhqKuyAPehqOECSNoP/view?usp=drive_link)  
-- **Beneish M-Score** – a classic rule-based approach using seven financial ratios (flag if M-Score > –2.22).  
-- **Piotroski F-Score** – a nine-rule quality screen (flag if F-Score ≤ 3).
+- **Beneish M-Score** – a classic rule-based approach using seven financial ratios (flag if M-Score > – 2.22).  
+- **Piotroski F-Score** – a nine-rule quality screen (flag if F-Score ≤ 3).
 
 **Training Data Source**  
 The Custom Trained Model was built using the [JarFraud FraudDetection dataset](https://github.com/JarFraud/FraudDetection/tree/master), which aggregates key financial indices—like Days-Sales-in-Receivables, Gross-Margin, Asset-Quality, and others—from public filings.
