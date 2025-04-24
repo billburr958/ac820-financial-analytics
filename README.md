@@ -2,6 +2,10 @@
 
 A Streamlit-based interactive dashboard for end-to-end portfolio analysis, optimization, performance measurement, fraud detection, and 10-K exploration.
 
+- **Prepared By:** 
+   Akash Goel
+   Shubham Kumar 
+
 ---
 
 ##  Features
