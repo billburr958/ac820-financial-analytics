@@ -1,10 +1,10 @@
-# 📈 AC820 Financial Analytics
+#  AC820 Financial Analytics
 
 A Streamlit-based interactive dashboard for end-to-end portfolio analysis, optimization, performance measurement, fraud detection, and 10-K exploration.
 
 ---
 
-## 🚀 Features
+##  Features
 
 - **Portfolio Overview**  
   Historical price charts, technical indicators (SMA, volatility, cumulative return), and company logos.
@@ -25,7 +25,7 @@ A Streamlit-based interactive dashboard for end-to-end portfolio analysis, optim
 
 ---
 
-## 📦 Installation
+##  Installation
 
 1. **Clone this repository**  
    ```bash
@@ -47,7 +47,7 @@ A Streamlit-based interactive dashboard for end-to-end portfolio analysis, optim
 
 ---
 
-## ▶️ Usage
+##  Usage
 
 ```bash
 streamlit run app/app.py
@@ -64,7 +64,7 @@ streamlit run app/app.py
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 ac820-financial-analytics/
@@ -90,7 +90,7 @@ ac820-financial-analytics/
 
 ---
 
-## 🛠 Development & Contributing
+##  Development & Contributing
 
 We welcome contributions! Please follow these steps:
 
