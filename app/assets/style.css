@@ -1,61 +1,74 @@
-/* --------------- Global -------------------- */
-.reportview-container .main {
-    background-color: #0D1B2A;       /* dark navy */
-    color: #E0E1DD;
-  }
-  [data-testid="stSidebar"] {
-    background: #1B263B;
-    color: #E0E1DD;
-  }
-  /* hide default menu & footer */
-  #MainMenu, footer { visibility: hidden; }
-  
-  /* --------------- Header -------------------- */
-  .reportview-container [data-testid="stHeader"] h1 {
-    background: linear-gradient(90deg, #005478, #008891);
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: 700;
-    font-size: 2.5rem;
-  }
-  
-  /* --------------- Card Panels --------------- */
-  div[data-testid="stVerticalBlock"] {
-    background: #1B263B;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    transition: transform 0.2s ease;
-  }
-  div[data-testid="stVerticalBlock"]:hover {
-    transform: translateY(-4px);
-  }
-  
-  /* --------------- KPI Cards ----------------- */
-  .kpi-row { display: flex; gap: 1rem; margin-top: 1rem; }
-  .kpi { 
-    background: linear-gradient(135deg, #005478, #008891);
-    border-radius: 8px;
-    padding: 1rem 1.5rem;
-    flex: 1;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    transition: box-shadow .2s ease;
-  }
-  .kpi:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.6); }
-  .kpi-title { font-size: 1rem; color: #E0E1DD; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
-  .kpi-value { font-size: 1.6rem; font-weight: 600; color: #F0EFEB; }
-  
-  /* --------------- Metric Definitions Text ----- */
-  .metric-defs li { margin-bottom: 0.5rem; }
-  
-  /* --------------- Plotly Charts --------------- */
-  .plotly-graph-div .main-svg {
-    background-color: #1B263B !important;
-  }
-  .plotly-graph-div .axis line, 
-  .plotly-graph-div .axis path {
-    stroke: #008891 !important;
-  }
-  
+/* assets/style.css - Jaw-Dropping Highlights */
+
+/* ─── Base Theme ─────────────────────────────────────────── */
+body {
+  background-color: #0D1B2A;   /* dark navy */
+  color: #E0E1DD;              /* off-white */
+  font-family: 'Inter', sans-serif;
+}
+#MainMenu, footer { visibility: hidden; }
+
+/* ─── Header ────────────────────────────────────────────── */
+[data-testid="stHeader"] h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #FF5400, #FFD700);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ─── Selected Tab Highlight ────────────────────────────── */
+.css-1vq4p4l button[aria-selected="true"] {
+  background: linear-gradient(45deg, #FF5400, #FFD700) !important;
+  color: #0D1B2A !important;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 4px 12px rgba(255,84,0,0.6);
+}
+.css-1vq4p4l button {
+  color: #E0E1DD !important;
+  transition: background 0.3s ease;
+}
+.css-1vq4p4l button:hover:not([aria-selected="true"]) {
+  background-color: #00547833 !important;
+}
+
+/* ─── Button Glow ───────────────────────────────────────── */
+.stButton > button {
+  background: linear-gradient(45deg, #FF5400, #FFD700) !important;
+  color: #0D1B2A !important;
+  font-weight: 700;
+  border: none !important;
+  border-radius: 24px !important;
+  padding: 0.75rem 1.75rem !important;
+  box-shadow: 0 0 16px #FF5400, 0 0 32px #FFD700 !important;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.stButton > button:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 0 24px #FF5400, 0 0 48px #FFD700 !important;
+}
+
+/* ─── Ticker Selection (Multiselect) ───────────────────── */
+/* Container */
+.css-1nmdiq5 {
+  background: #008891 !important;
+  border: 2px solid #FFD700 !important;
+  border-radius: 8px !important;
+}
+/* Selected items */
+.css-1nmdiq5 .css-1iy09lx {
+  color: #FFF !important;
+}
+.css-1nmdiq5 .css-1y0tads svg {
+  color: #FFD700 !important;
+}
+
+/* ─── Glass Panels ───────────────────────────────────────── */
+div[data-testid="stVerticalBlock"] {
+  background: rgba(27,38,59,0.8) !important;
+  border: 1px solid #005478 !important;
+  border-radius: 12px !important;
+  padding: 1.5rem !important;
+  margin-bottom: 2rem !important;
+  backdrop-filter: blur(4px) !important;
+}

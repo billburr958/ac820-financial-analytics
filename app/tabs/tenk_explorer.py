@@ -92,8 +92,8 @@ def render():
     # -------------------------------------------------------------------------
     st.warning(
         "⚠️ This tab is independent of the others. "
-        "To select tickers or years here clear your main page filters." \
-        "Any choices made here will reset the main page filters when you switch back.",
+        "To select tickers or years here clear your main page filters. " 
+        "Any choices made here will reset the main page filters when you switch back.",\
         icon="⚠️"
     )
 
