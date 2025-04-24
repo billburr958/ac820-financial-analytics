@@ -1,6 +1,6 @@
 # ------------- config.py -----------------
-EMAIL_ADDRESS = "electros@bu.edu"                            # SEC-EDGAR downloader
-OPENAI_API_KEY = "XXXXX"
+EMAIL_ADDRESS = "akash24@bu.edu"                            # SEC-EDGAR downloader
+OPENAI_API_KEY = "XXXX"
 FMP_API_KEY   = "XXXX"           # FinancialModelingPrep key
 THEME_CSS = """
 <style>
