@@ -1,0 +1,9 @@
+[theme]
+primaryColor = "#005478"           # deep financial blue
+backgroundColor = "#0D1B2A"        # dark navy
+secondaryBackgroundColor = "#1B263B"
+textColor = "#E0E1DD"
+font = "sans serif"
+
+[server]
+headless = true
