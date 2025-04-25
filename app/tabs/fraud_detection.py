@@ -54,7 +54,7 @@ def render(tickers):
 This tab lets you assess a company’s financial statements for potential fraud using three complementary methods:
 
 - **Custom Trained Model (ML)** – a CatBoost-based classifier we trained on financial ratios; outputs a fraud probability plus SHAP explainability.  
-  ▶️ [View Development Notebook](https://drive.google.com/file/d/1Xs2oxFGYA_96gk_oEGEKkYmFkMfREoSe/view?usp=drive_link)  
+  ▶️ [View Development Notebook](https://drive.google.com/file/d/1ta3DPrh3Mu1oA7kMJyIFjl7Rlpe-PezH/view?usp=drive_link)  
 - **Beneish M-Score** – a classic rule-based approach using seven financial ratios (flag if M-Score > – 2.22).  
 - **Piotroski F-Score** – a nine-rule quality screen (flag if F-Score ≤ 3).
 
