@@ -1,5 +1,5 @@
 # ------------- config.py -----------------
-EMAIL_ADDRESS = "akash24@bu.edu"                            # SEC-EDGAR downloader
+EMAIL_ADDRESS = "xxx@yy.ai"                            # SEC-EDGAR downloader
 OPENAI_API_KEY = "XXXX"
 FMP_API_KEY   = "XXXX"           # FinancialModelingPrep key
 THEME_CSS = """
@@ -13,4 +13,3 @@ h1{color:#2c3e50;font-weight:700;}
 .css-1adrfps{background:#fff;border-radius:10px;padding:10px;box-shadow:0 4px 12px rgba(0,0,0,.1);}
 </style>
 """
-
