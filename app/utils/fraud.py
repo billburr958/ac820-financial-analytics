@@ -5,12 +5,18 @@ import numpy as np, pandas as pd, requests, joblib, shap
 from functools import lru_cache
 from config import FMP_API_KEY
 import streamlit as st
+import os
 
 
 FMP_API_KEY = st.secrets["FMP_API_KEY"]
 
 # ------------ load CatBoost model once ------------
-CB_MODEL = joblib.load("best_model.pkl")
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Build the full path to the CSS file
+cb_model_path = os.path.join(current_dir, "best_model.pkl")
+
+CB_MODEL = joblib.load(cb_model_path)
 
 # ------------ API helper (two fiscal years) --------
 @lru_cache(maxsize=128)
