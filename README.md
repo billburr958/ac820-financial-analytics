@@ -59,7 +59,7 @@ Change the following parameters in config.py by putting the relevant email addre
 - OPENAI_API_KEY = Open AI API Key
 - FMP_API_KEY   = FMP Key  
 
-Navigate to the directory "AC820/app" and then run the below script in terminal:
+Navigate to the directory "app/" and then run the below script in terminal:
 ```bash
 streamlit run app.py
 ```
