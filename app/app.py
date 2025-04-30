@@ -4,12 +4,17 @@ import streamlit as st  # must be first Streamlit command
 import os
 import sys
 
-# Replace this with the absolute path to your folder
-folder_path = os.path.abspath("app")
+# # Replace this with the absolute path to your folder
+# folder_path = os.path.abspath("app")
 
-# Add the folder to the system path if it's not already there
-if folder_path not in sys.path:
-    sys.path.insert(0, folder_path)
+# # Add the folder to the system path if it's not already there
+# if folder_path not in sys.path:
+#     sys.path.insert(0, folder_path)
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Build the full path to the CSS file
+css_file_path = os.path.join(current_dir, "assets", "style.css")
 
 st.set_page_config(
     page_title="📈 Portfolio Analysis & Optimizer",
@@ -22,7 +27,8 @@ import pandas as pd
 
 # ── Load custom CSS for financial dashboard styling ──────
 # with open(os.path.join(folder_path,"assets/style.css")) as f:
-with open("assets/style.css") as f:
+# with open("assets/style.css") as f:
+with open(css_file_path) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # ── Load Google Font ────────────────────────────────────
