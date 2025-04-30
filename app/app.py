@@ -1,6 +1,16 @@
 # app/app.py
 
 import streamlit as st  # must be first Streamlit command
+import os
+import sys
+
+# Replace this with the absolute path to your folder
+folder_path = os.path.abspath(".")
+
+# Add the folder to the system path if it's not already there
+if folder_path not in sys.path:
+    sys.path.insert(0, folder_path)
+
 st.set_page_config(
     page_title="📈 Portfolio Analysis & Optimizer",
     layout="wide",
