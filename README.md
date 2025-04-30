@@ -53,8 +53,15 @@ A Streamlit-based interactive dashboard for end-to-end portfolio analysis, optim
 
 ##  Usage
 
+Change the following parameters in config.py by putting the relevant email address and API Keys:
+
+- EMAIL_ADDRESS = Your Working/School email                            # SEC-EDGAR downloader
+- OPENAI_API_KEY = Open AI API Key
+- FMP_API_KEY   = FMP Key  
+
+Navigate to the directory "AC820/app" and then run the below script in terminal:
 ```bash
-streamlit run app/app.py
+streamlit run app.py
 ```
 
 - Use the **sidebar** to select tickers and date range.  
