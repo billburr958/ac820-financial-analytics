@@ -4,6 +4,10 @@
 import numpy as np, pandas as pd, requests, joblib, shap
 from functools import lru_cache
 from config import FMP_API_KEY
+import streamlit as st
+
+
+FMP_API_KEY = st.secrets["FMP_API_KEY"]
 
 # ------------ load CatBoost model once ------------
 CB_MODEL = joblib.load("best_model.pkl")

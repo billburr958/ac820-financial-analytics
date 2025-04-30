@@ -4,6 +4,9 @@ from bs4 import BeautifulSoup
 from transformers import pipeline
 from sec_edgar_downloader import Downloader
 from config import EMAIL_ADDRESS
+import streamlit as st
+
+EMAIL_ADDRESS = st.secrets["EMAIL_ADDRESS"]
 
 def download(ticker:str, form:str)->str|None:
     dl=Downloader(email_address=EMAIL_ADDRESS); dl.get(form,ticker,amount=1)

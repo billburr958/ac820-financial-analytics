@@ -6,11 +6,12 @@ from sec_edgar_downloader import Downloader
 from sentence_transformers import SentenceTransformer, util
 from transformers import pipeline
 from config import EMAIL_ADDRESS
+import streamlit as st
 
 log = logging.getLogger(__name__)
 
 # ── configuration (adjust email only) -------------------------
-EMAIL     = EMAIL_ADDRESS
+EMAIL     = st.secrets["EMAIL_ADDRESS"]
 EMB_MODEL = "all-MiniLM-L6-v2"
 QA_MODEL  = "distilbert-base-cased-distilled-squad"
 CHUNK_W   = 220

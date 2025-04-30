@@ -14,6 +14,8 @@ from sec_edgar_downloader import Downloader
 from sentence_transformers import util
 from config import OPENAI_API_KEY
 
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+
 # ── Configuration ─────────────────────────────────────────
 EMAIL     = "electros@bu.edu"
 QA_MODEL  = "distilbert-base-cased-distilled-squad"
