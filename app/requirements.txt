@@ -23,7 +23,6 @@ etelemetry==0.3.1
 filelock==3.18.0
 financedatabase==2.2.2
 financetoolkit==1.9.9
-fitz==0.0.1.dev2
 fonttools==4.56.0
 frozendict==2.4.6
 fsspec==2025.3.2
